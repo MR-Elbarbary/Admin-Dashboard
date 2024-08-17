@@ -1,0 +1,50 @@
+*{
+    --mainColor: rgb(43, 143, 236) ;
+    --mdc: rgba(43, 143, 236, 0.336);
+    --secondaryColor: rgba(233, 185, 27, 0.829);
+    font-size: 1.2rem;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.dashboard{
+    grid-row: 1 / span 2;
+    background-color: var(--mainColor);
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    padding: 15px;
+}
+
+.dashboard div{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.6rem;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+}
+
+a:hover{
+    background-color: var(--mdc);
+}
+
+h1{
+    font-size: 1.8rem;
+    color: white;
+}
+
+.header{
+    background-color: white;
+}
+
+.main{
+    background-color: lightgray;
+}
