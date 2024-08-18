@@ -3,6 +3,11 @@
     --mdc: rgba(43, 143, 236, 0.336);
     --secondaryColor: rgba(233, 185, 27, 0.829);
     --fsm: 1.4rem;
+    --fss: 1.2rem;
+    --is: 24px;
+
+    margin: 0px;
+    padding: 0px;
 }
 
 .container{
@@ -44,40 +49,81 @@ h1{
 
 .header{
     grid-row: 2/3;
+    grid-column: 2 / 4;
     background-color: white;
+    display: flex;
+    gap: 5px;
+    padding: 0px 30px;
+
 }
 
 .top{
     grid-row: 1/2;
+    grid-column: 2 / 4;
+    display: flex;
+    gap: 5vw;
+    padding: 0px 30px;
+}
+
+
+.search , .account , .info , .functions{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search , .info{
+    flex: 1;
+}
+.search input{
+    flex: 1;
 }
 
 .projects{
     grid-column: 2 / 3;
     grid-row: 3/5 ;
+    background-color: lightgray;
 }
 
 .announcements{
     grid-column: 3 / 4;
     grid-row: 3 / 4;
+    background-color: lightgray;
 }
 
 .trending{
     grid-column: 3 / 4;
     grid-row: 4 / 5;
+    background-color: lightgray;
 }
 
 input{
     background-color: lightgray;
+    border-style: none;
+    height: 1.8rem;
+    border-radius: 20px;
 }
 
 button{
-    font-size: var(--fsm);
-    padding: 0.3rem 0.6rem;
+    font-size: var(--fss);
+    padding: 0.6rem 1.6rem;
     background: var(--mainColor);
     border-style: none;
     border-radius: 20px;
+    color: white;
 }
 
 .button:hover{
     background-color: var(--mdc);
+}
+
+.profilePic{
+    border-radius: 100%;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.is{
+    width: var(--is);
+    height: var(--is);
 }
