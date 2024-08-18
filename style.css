@@ -1,13 +1,16 @@
 *{
     --mainColor: rgb(43, 143, 236) ;
     --mdc: rgba(43, 143, 236, 0.336);
-    --secondaryColor: rgba(233, 185, 27, 0.829);
+    --secondaryColor: rgba(233, 168, 27, 0.829);
     --fsm: 1.4rem;
     --fss: 1.2rem;
     --is: 24px;
+    --bg: rgba(219, 230, 241, 0.966);
 
     margin: 0px;
     padding: 0px;
+    line-height: 1.5rem;
+    font-family:Helvetica, Arial, sans-serif;
 }
 
 .container{
@@ -47,14 +50,30 @@ h1{
     margin-bottom: 0pxs;
 }
 
+h2{
+    font-size: 1.6rem;
+
+}
+
+h3{
+    font-size: 1.45rem;
+    margin-bottom: 15px;
+}
+
+h4{
+    margin-top: 15px;
+    font-size: 1.3rem;
+}
+h5{
+    font-size: 1rem;
+}
 .header{
     grid-row: 2/3;
     grid-column: 2 / 4;
     background-color: white;
     display: flex;
     gap: 5px;
-    padding: 0px 30px;
-
+    padding: 15px 30px;
 }
 
 .top{
@@ -62,7 +81,11 @@ h1{
     grid-column: 2 / 4;
     display: flex;
     gap: 5vw;
-    padding: 0px 30px;
+    padding: 10px 30px;
+}
+
+.account h3{
+    margin-bottom: 0px;
 }
 
 
@@ -82,23 +105,50 @@ h1{
 .projects{
     grid-column: 2 / 3;
     grid-row: 3/5 ;
-    background-color: lightgray;
+    background-color: var(--bg);
+    padding: 30px 10px;
 }
 
-.announcements{
+.rightDiv{
     grid-column: 3 / 4;
-    grid-row: 3 / 4;
-    background-color: lightgray;
+    grid-row: 3 / 5;
+    background-color: var(--bg);
+    padding: 30px 30px 30px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
-.trending{
-    grid-column: 3 / 4;
-    grid-row: 4 / 5;
-    background-color: lightgray;
+.announcements> div , .trending> div{
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
+
+.announcement>h5{
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+.trend{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.announcement{
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
 
 input{
-    background-color: lightgray;
+    background-color: var(--bg);
     border-style: none;
     height: 1.8rem;
     border-radius: 20px;
@@ -119,11 +169,56 @@ button{
 
 .profilePic{
     border-radius: 100%;
-    width: 3.5rem;
-    height: 3.5rem;
+}
+.pfs{
+    width: 3rem;
+    height: 3rem;
+}
+
+.pfl{
+    width: 4rem;
+    height: 4rem;
 }
 
 .is{
     width: var(--is);
     height: var(--is);
+}
+
+.projects>div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    border-left: 10px var(--secondaryColor) solid;
+    padding: 15px 20px;
+    box-shadow: 2px 2px 2px rgb(197, 196, 196);
+}
+
+.icons{
+    align-self: flex-end;
+    flex: 1;
+    display: flex;
+    align-items: end;
+    gap: 8px;
+    
+}
+
+.trend>img{
+    flex: 0 0 auto;
+}
+
+.card>div,
+.announcement>div,
+.trend>div>div
+{
+    color: rgb(92, 92, 92);
 }
