@@ -7,11 +7,11 @@
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 3fr 1fr;
 }
 
 .dashboard{
-    grid-row: 1 / span 2;
+    grid-row: 1 / 5;
     background-color: var(--mainColor);
     display: flex;
     flex-direction: column;
@@ -39,12 +39,33 @@ a:hover{
 h1{
     font-size: 1.8rem;
     color: white;
+    margin-bottom: 0pxs;
 }
 
 .header{
+    grid-row: 2/3;
     background-color: white;
 }
 
-.main{
+.top{
+    grid-row: 1/2;
+}
+
+.projects{
+    grid-column: 2 / 3;
+    grid-row: 3/5 ;
+}
+
+.announcements{
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+.trending{
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+}
+
+input{
     background-color: lightgray;
 }
